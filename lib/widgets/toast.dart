@@ -31,7 +31,7 @@ class Toast {
       title: Text("Berhasil"),
       description: Text(message),
       alignment: Alignment.bottomCenter,
-      autoCloseDuration: const Duration(seconds: 3),
+      autoCloseDuration: const Duration(seconds: 2),
       backgroundColor: Color(0xFFFFFFFF),
       icon: Icon(Iconsax.tick_circle),
       borderRadius: BorderRadius.circular(12.0),
