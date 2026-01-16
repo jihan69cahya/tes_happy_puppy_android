@@ -40,6 +40,7 @@ class _LoginState extends State<Login> with SingleTickerProviderStateMixin {
     super.dispose();
   }
 
+  // fungsi menghandle logika login sesuai di db
   Future<void> _handleLogin() async {
     if (_formKey.currentState!.validate()) {
       setState(() {
@@ -104,9 +105,9 @@ class _LoginState extends State<Login> with SingleTickerProviderStateMixin {
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
             colors: [
-              const Color(0xFF1E40AF), // Blue 700
-              const Color(0xFF3B82F6), // Blue 500
-              const Color(0xFF60A5FA), // Blue 400
+              const Color(0xFF1E40AF),
+              const Color(0xFF3B82F6),
+              const Color(0xFF60A5FA),
             ],
           ),
         ),
@@ -119,7 +120,6 @@ class _LoginState extends State<Login> with SingleTickerProviderStateMixin {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    // Logo dengan efek floating
                     Container(
                       padding: const EdgeInsets.all(24),
                       decoration: BoxDecoration(
@@ -142,7 +142,6 @@ class _LoginState extends State<Login> with SingleTickerProviderStateMixin {
                     ),
                     const SizedBox(height: 50),
 
-                    // Form Container dengan glassmorphism effect
                     Container(
                       padding: const EdgeInsets.all(28),
                       decoration: BoxDecoration(
@@ -160,7 +159,6 @@ class _LoginState extends State<Login> with SingleTickerProviderStateMixin {
                         key: _formKey,
                         child: Column(
                           children: [
-                            // Welcome Text
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
@@ -191,7 +189,6 @@ class _LoginState extends State<Login> with SingleTickerProviderStateMixin {
                             ),
                             const SizedBox(height: 30),
 
-                            // Username Field
                             TextFormField(
                               controller: _usernameController,
                               enabled: !_isLoading,
@@ -253,7 +250,6 @@ class _LoginState extends State<Login> with SingleTickerProviderStateMixin {
                             ),
                             const SizedBox(height: 20),
 
-                            // Password Field
                             TextFormField(
                               controller: _passwordController,
                               obscureText: _obscurePassword,
@@ -329,7 +325,6 @@ class _LoginState extends State<Login> with SingleTickerProviderStateMixin {
                             ),
                             const SizedBox(height: 32),
 
-                            // Login Button
                             SizedBox(
                               width: double.infinity,
                               height: 56,
@@ -385,7 +380,6 @@ class _LoginState extends State<Login> with SingleTickerProviderStateMixin {
                     ),
                     const SizedBox(height: 24),
 
-                    // Footer Text
                     Text(
                       '🎵 Nyanyikan kebahagiaan bersama keluarga 🎵',
                       style: TextStyle(

@@ -25,6 +25,7 @@ class _DataState extends State<Data> {
     _loadSongs();
   }
 
+  // fungsi mengambil data lagu dari db
   Future<void> _loadSongs() async {
     setState(() => _isLoading = true);
     final db = await DBHelper.instance.database;
@@ -33,6 +34,7 @@ class _DataState extends State<Data> {
     setState(() => _isLoading = false);
   }
 
+  // fungsi filter dan urutkan data lagu
   void _filterAndSortSongs() {
     setState(() {
       _filteredSongs = _allSongs.where((song) {
@@ -47,6 +49,7 @@ class _DataState extends State<Data> {
     });
   }
 
+  // fungsi mengurutkan data lagu berdasarkan judul atau penyanyi
   void _sortSongs() {
     if (_sortBy == 'Judul') {
       _filteredSongs.sort(
@@ -63,6 +66,7 @@ class _DataState extends State<Data> {
     }
   }
 
+  // deklrasi warna berdasarkan genre
   Color _getGenreColor(String genre) {
     switch (genre) {
       case 'Pop':
@@ -76,6 +80,7 @@ class _DataState extends State<Data> {
     }
   }
 
+  // fungsi dialog tambah dan edit data lagu
   void _showAddEditDialog({Map<String, dynamic>? song}) {
     final isEdit = song != null;
     final titleController = TextEditingController(text: song?['title'] ?? '');
@@ -282,6 +287,7 @@ class _DataState extends State<Data> {
     );
   }
 
+  // fungsi menghapus data lagu
   void _deleteSong(Map<String, dynamic> song) {
     showDialog(
       context: context,

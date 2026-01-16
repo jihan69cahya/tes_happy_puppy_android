@@ -20,6 +20,7 @@ class _ProfileState extends State<Profile> {
     _loadUserData();
   }
 
+  // fungsi ambil data user login dari session
   Future<void> _loadUserData() async {
     final prefs = await SharedPreferences.getInstance();
     setState(() {
@@ -29,6 +30,7 @@ class _ProfileState extends State<Profile> {
     });
   }
 
+  // fungsi menghandle logout, menghapus sesi
   Future<void> _logout() async {
     final confirm = await showDialog<bool>(
       context: context,
@@ -85,7 +87,6 @@ class _ProfileState extends State<Profile> {
           : SingleChildScrollView(
               child: Column(
                 children: [
-                  // Header dengan gradient background
                   Container(
                     width: double.infinity,
                     decoration: const BoxDecoration(
@@ -98,7 +99,6 @@ class _ProfileState extends State<Profile> {
                     child: Column(
                       children: [
                         const SizedBox(height: 30),
-                        // Avatar dengan efek glow
                         Container(
                           padding: const EdgeInsets.all(5),
                           decoration: BoxDecoration(
@@ -141,7 +141,6 @@ class _ProfileState extends State<Profile> {
                         ),
                         const SizedBox(height: 20),
 
-                        // Nama
                         Text(
                           name,
                           style: const TextStyle(
@@ -154,7 +153,6 @@ class _ProfileState extends State<Profile> {
                         ),
                         const SizedBox(height: 8),
 
-                        // Username badge
                         Container(
                           padding: const EdgeInsets.symmetric(
                             horizontal: 20,
@@ -194,14 +192,12 @@ class _ProfileState extends State<Profile> {
                     ),
                   ),
 
-                  // Konten Bawah
                   Padding(
                     padding: const EdgeInsets.all(24.0),
                     child: Column(
                       children: [
                         const SizedBox(height: 100),
 
-                        // Logout Button dengan desain modern
                         Container(
                           width: double.infinity,
                           decoration: BoxDecoration(

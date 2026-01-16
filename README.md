@@ -1,16 +1,50 @@
-# tes_android
+# Aplikasi Manajemen Lagu
 
-A new Flutter project.
+Aplikasi Android sederhana berbasis Flutter untuk autentikasi user dan CRUD data lagu menggunakan SQLite.
 
-## Getting Started
+Aplikasi ini dibuat menggunakan Flutter (Dart) yang memungkinkan pengguna untuk:
 
-This project is a starting point for a Flutter application.
+- Login menggunakan username dan password
+- Mengelola data lagu (tambah, ubah, hapus, lihat)
+- Menyimpan data secara lokal menggunakan SQLite (sqflite)
 
-A few resources to get you started if this is your first Flutter project:
+## Fitur
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Autentikasi user (Login)
+- CRUD data lagu
+  - Judul lagu
+  - Penyanyi
+  - Genre
+- Penyimpanan data lokal menggunakan SQLite
+- Validasi input form
+- Tampilan UI sederhana dan responsif
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Teknologi
+
+- Flutter (Dart)
+- SQLite (sqflite)
+- SharedPreferences
+- Material Design
+
+## Alur Aplikasi
+
+1. Aplikasi dibuka
+2. User login menggunakan username dan password (admin/admin)
+3. Jika login berhasil, user masuk ke halaman utama
+4. User dapat menambah, mengedit, atau menghapus data lagu
+5. Data disimpan secara lokal menggunakan SQLite
+
+## Cara Menjalankan Aplikasi
+
+1. Clone repository ini
+2. Jalankan perintah:
+   flutter clean
+   flutter pub get
+3. Hubungkan emulator atau device
+4. Jalankan aplikasi:
+   flutter run
+
+## Akun Login
+
+Username: admin  
+Password: admin123

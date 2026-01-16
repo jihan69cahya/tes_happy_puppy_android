@@ -13,11 +13,13 @@ Future<void> main() async {
 
   final prefs = await SharedPreferences.getInstance();
 
+  // mengambil data session login di sharedpreferences
   final bool hasLoginKey = prefs.containsKey('isLoggedIn');
   final bool isLoggedIn = hasLoginKey
       ? (prefs.getBool('isLoggedIn') ?? false)
       : false;
 
+  // cek ada sesi login atau tidak
   runApp(
     ToastificationWrapper(
       child: MyApp(initialRoute: isLoggedIn ? '/main' : '/login'),

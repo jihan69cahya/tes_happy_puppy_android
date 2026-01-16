@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:toastification/toastification.dart';
 import 'package:iconsax/iconsax.dart';
 
+// fungsi global untuk toast warning, sukses, error dan info
 class Toast {
   static void showWarningToast(context, String message) {
     toastification.show(

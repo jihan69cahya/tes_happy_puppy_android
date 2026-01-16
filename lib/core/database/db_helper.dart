@@ -13,6 +13,7 @@ class DBHelper {
     return _database!;
   }
 
+  // inisialisasi database
   Future<Database> _initDB(String fileName) async {
     final dbPath = await getDatabasesPath();
     final path = join(dbPath, fileName);
@@ -20,6 +21,7 @@ class DBHelper {
     return await openDatabase(path, version: 1, onCreate: _createDB);
   }
 
+  // fungsi untuk create tabel users, songs dan insert data users
   Future _createDB(Database db, int version) async {
     await db.execute('''
       CREATE TABLE users (
