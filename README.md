@@ -47,4 +47,4 @@ Aplikasi ini dibuat menggunakan Flutter (Dart) yang memungkinkan pengguna untuk:
 ## Akun Login
 
 Username: admin  
-Password: admin123
+Password: admin
